@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    font-family: "Inter", sans-serif;
+}
+body{
+    width: 100%;
+    margin:0;
+    padding:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.bg{
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    margin:0;
+    padding: 0;
+    position: fixed;
+    background: 
+    radial-gradient(
+      farthest-side at bottom left,
+      rgba(123, 33, 33, 0.5), 
+      transparent 200vmax
+    ),
+    radial-gradient(
+      farthest-corner at bottom right,
+      rgba(255, 28, 28, 0.5), 
+      transparent 60vmax
+    ),
+    radial-gradient(
+        farthest-corner at top left,
+        rgba(255, 255, 255, 0.5), 
+        transparent 60vmax
+    ),
+    radial-gradient(
+        farthest-corner at top right,
+        rgba(0, 0, 0, 0.5), 
+        transparent 250vmax
+    );
+}
+
+.navbar{
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.link-container > *{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-left: 20px;
+}
+.link-container > *:hover{
+    opacity: 0.8;
+}
+#logo{
+    width: 200px;
+}
+.actionbar{
+    width: 100%;
+    margin: 0;
+    padding: 30px;
+    box-sizing: border-box;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    align-items: center;
+}
+.actionbar > a{
+    color: white;
+    text-decoration: none;
+}
+.actionbar > a:hover{
+    opacity: 0.8;
+}
+#title{
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+#add-movie-button, #update-movie-button{
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border-radius: 25px;
+}
+.movie-card-container{
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+    text-align: center;
+}
+.movie-card{
+    color: white;
+    font-size: 12px;
+    width: 275px;
+    padding-top: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    border-radius: 5px;
+}
+.movie-card > a > img{
+    width: 125px;
+}
+.movie-card > a{
+    color: white;
+    text-decoration: none;
+}
+.movie-card > a:hover{
+    opacity: 0.8;
+}
+main{
+    height: 150%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 150px);
+}
+.details-container{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-details{
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    color: white;
+}
+.weak{
+    font-weight: normal;
+}
+.info-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    .movie-card-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+}
+@media screen and (max-width: 1000px) {
+    .main-details{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+    }
+}
+@media screen and (min-width: 1910px) {
+    .movie-card{
+        width: 300px;
+        height: 300px;
+    }
+    .movie-card > a > img{
+        width: 150px;
+    }
+}
